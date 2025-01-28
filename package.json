@@ -1,0 +1,26 @@
+{
+  "name": "node-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "react"
+  ],
+  "license": "ISC",
+  "author": "Ayush Ojha",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "node": "^22.13.0",
+    "react": "^19.0.0",
+    "react-router-dom": "^6.28.2",
+    "tailwindcss": "^4.0.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  }
+}

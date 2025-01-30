@@ -1,13 +1,17 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Body from "./components/Body";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import ReactDOM from "react-dom/client";
 import Registration from "./components/Registration";
+import SetupOrg from "./components/SetupOrg";
+import ChatbotIntegration from "./components/ChatbotIntegration";
 const AppLayout = () => {
   return (
     <div className="app">
       <Header />
       <Outlet />
+      <Footer />
     </div>
   );
 };
@@ -24,6 +28,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/registration",
         element: <Registration />,
+      },
+      {
+        path: "/setuporg",
+        element: <SetupOrg />,
+      },
+      {
+        path: "/chatbotintegration",
+        element: <ChatbotIntegration />,
       },
     ],
   },

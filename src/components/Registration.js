@@ -1,10 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 
 const Registration = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
+    name: "ABC",
+    email: "abc@gmail.com",
+    password: "ABC234",
   });
 
   const handleChange = (e) => {
@@ -18,7 +20,7 @@ const Registration = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted", formData);
-    // Handle form submission logic (e.g., API call) here.
+    navigate("/setuporg");
   };
 
   return (
@@ -86,7 +88,12 @@ const Registration = () => {
             />
           </div>
 
-          {/* Submit Button */}
+          <div>
+            <a className="text-blue-500" href="">
+              Email verification is required.
+            </a>
+          </div>
+
           <button
             type="submit"
             className="w-full py-3 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -95,7 +102,6 @@ const Registration = () => {
           </button>
         </form>
 
-        {/* Google Login Button */}
         <div className="mt-6">
           <button
             type="button"

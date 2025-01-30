@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -11,8 +12,14 @@ const Header = () => {
   return (
     <header className="bg-blue-500 p-4">
       <div className="flex justify-between items-center">
-        <div className="text-white text-xl font-bold">Beyond Chats</div>
-
+        <div
+          className="text-white text-xl font-bold cursor-pointer"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Beyond Chats
+        </div>
         <button
           className="lg:hidden text-white focus:outline-none"
           onClick={toggleMenu}
@@ -34,11 +41,7 @@ const Header = () => {
         </button>
 
         {/* Navigation Links */}
-        <nav
-          className={`hidden lg:flex space-x-4 ${
-            isMenuOpen ? "block" : "hidden"
-          } lg:block`}
-        >
+        <nav className={`hidden lg:flex lg:space-x-4`}>
           <Link to={"/registration"} className="text-white hover:text-gray-300">
             Register
           </Link>

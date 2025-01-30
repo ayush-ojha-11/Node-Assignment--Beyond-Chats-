@@ -1,8 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Body = () => {
+  const navigate = useNavigate();
+
+  function proceedToRegister() {
+    navigate("/registration");
+  }
+
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 min-h-screen">
       <section className="flex flex-col lg:flex-row items-center justify-between py-16 px-8 lg:px-24 bg-blue-600 text-white">
         <div className="lg:w-1/2 w-full text-center lg:text-left">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4">
@@ -12,7 +19,10 @@ const Body = () => {
             Empower your business with custom AI chatbots that provide 24/7
             support, boost customer engagement, and streamline operations.
           </p>
-          <button className="px-6 py-3 bg-yellow-500 text-black font-semibold rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+          <button
+            className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            onClick={() => proceedToRegister()}
+          >
             Get Started
           </button>
         </div>
@@ -25,13 +35,11 @@ const Body = () => {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="py-16 px-8 lg:px-24 bg-white">
         <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">
           Features of Beyond Chats
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-          {/* Feature 1 */}
+        <div className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           <div className="bg-gray-100 p-6 rounded-lg shadow-md">
             <h3 className="text-2xl font-bold text-blue-600 mb-4">
               24/7 Support
@@ -42,7 +50,6 @@ const Body = () => {
             </p>
           </div>
 
-          {/* Feature 2 */}
           <div className="bg-gray-100 p-6 rounded-lg shadow-md">
             <h3 className="text-2xl font-bold text-blue-600 mb-4">
               Easy Integration
@@ -53,7 +60,6 @@ const Body = () => {
             </p>
           </div>
 
-          {/* Feature 3 */}
           <div className="bg-gray-100 p-6 rounded-lg shadow-md">
             <h3 className="text-2xl font-bold text-blue-600 mb-4">
               Customizable AI
@@ -63,6 +69,29 @@ const Body = () => {
               needs.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-8 lg:px-24 bg-white">
+        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">
+          Trusted by Leading Companies
+        </h2>
+        <div className="flex flex-wrap justify-center gap-8 items-center">
+          <img
+            src="https://pngimg.com/uploads/microsoft/microsoft_PNG3.png"
+            alt="Company 1"
+            className="h-16 object-contain"
+          />
+          <img
+            src="https://pngimg.com/d/google_PNG19644.png"
+            alt="Company 2"
+            className="h-16 object-contain"
+          />
+          <img
+            src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/235_Nvidia_logo-512.png"
+            alt="Company 3"
+            className="h-16 object-contain"
+          />
         </div>
       </section>
     </div>

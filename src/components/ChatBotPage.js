@@ -20,7 +20,7 @@ const ChatBotPage = () => {
     setTimeout(() => {
       setMessages((prevMessages) => [
         ...prevMessages,
-        { sender: "bot", text: "I'm just a dummy bot! 😊" },
+        { sender: "bot", text: "I'm a dummy bot! 😊" },
       ]);
     }, 1000);
 
@@ -43,7 +43,7 @@ const ChatBotPage = () => {
           <div className="flex justify-between items-center bg-blue-500 text-white p-3 rounded-t-lg">
             <h2 className="text-lg font-semibold">Chatbot</h2>
             <button onClick={toggleChat}>
-              <FaTimes size={20} />
+              <FaTimes size={25} />
             </button>
           </div>
 
@@ -68,7 +68,7 @@ const ChatBotPage = () => {
             ))}
           </div>
 
-          <div className="p-3 border-t flex">
+          <div className="p-3 border-t flex space-x-1">
             <input
               type="text"
               placeholder="Type a message..."

@@ -42,12 +42,13 @@ const Header = () => {
 
         {/* Navigation Links */}
         <nav className={`hidden lg:flex lg:space-x-4`}>
-          <Link to={"/registration"} className="text-white hover:text-gray-300">
-            Register
-          </Link>
           <Link to={"/"} className="text-white hover:text-gray-300">
             Home
           </Link>
+          <Link to={"/registration"} className="text-white hover:text-gray-300">
+            Register
+          </Link>
+
           <Link to={"/about"} className="text-white hover:text-gray-300">
             About
           </Link>
@@ -64,6 +65,11 @@ const Header = () => {
       <div className={`lg:hidden ${isMenuOpen ? "block" : "hidden"}`}>
         <ul className="space-y-2 mt-2">
           <li>
+            <Link to={"/"} className="block text-white hover:text-gray-300">
+              Home
+            </Link>
+          </li>
+          <li>
             <Link
               to={"/registration"}
               className="block text-white hover:text-gray-300"
@@ -71,11 +77,7 @@ const Header = () => {
               Register
             </Link>
           </li>
-          <li>
-            <Link to={"/"} className="block text-white hover:text-gray-300">
-              Home
-            </Link>
-          </li>
+
           <li>
             <Link
               to={"/about"}

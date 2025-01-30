@@ -6,6 +6,7 @@ import ReactDOM from "react-dom/client";
 import Registration from "./components/Registration";
 import SetupOrg from "./components/SetupOrg";
 import ChatbotIntegration from "./components/ChatbotIntegration";
+import ChatBotPage from "./components/ChatBotPage";
 const AppLayout = () => {
   return (
     <div className="app">
@@ -36,6 +37,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/chatbotintegration",
         element: <ChatbotIntegration />,
+      },
+      {
+        path: "/chatbotpage",
+        element: <ChatBotPage />,
       },
     ],
   },

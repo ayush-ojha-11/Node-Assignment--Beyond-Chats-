@@ -9,7 +9,9 @@ const ChatbotIntegration = () => {
   const [showConfetti, setShowConfetti] = useState(false);
   const navigate = useNavigate();
 
-  const testChatbot = () => {};
+  const testChatbot = () => {
+    navigate("/chatbotpage");
+  };
 
   const handleIntegrateWebsite = () => {
     alert("You can follow the instructions below to integrate the chatbot.");

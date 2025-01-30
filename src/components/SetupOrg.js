@@ -30,16 +30,12 @@ const SetupOrg = () => {
     setSelectedPage(page);
   };
 
-  const handleNextStep = () => {
-    alert("Moving to the next step...");
-  };
-
   // Handle training state toggle
   const toggleTraining = () => {
     setIsTraining(!isTraining);
     setTimeout(() => {
       navigate("/chatbotintegration");
-    }, 1000);
+    }, 3000);
   };
 
   return (
@@ -157,7 +153,7 @@ const SetupOrg = () => {
         </div>
       )}
 
-      <div className="flex justify-between items-center bg-white p-8 rounded-lg shadow-md">
+      <div className="flex flex-col lg:flex-row justify-between items-center bg-white p-8 rounded-lg shadow-md">
         <div>
           <button
             onClick={toggleTraining}
@@ -166,7 +162,7 @@ const SetupOrg = () => {
             {isTraining ? "Wait for Training to Finish" : "Move to Next Step"}
           </button>
         </div>
-        <div>
+        <div className="text-center mt-4">
           {isTraining && (
             <p className="text-sm text-blue-600">
               Training in progress... please wait for the process to complete.

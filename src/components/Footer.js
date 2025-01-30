@@ -15,16 +15,28 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col lg:flex-row space-y-4 lg:space-x-8 text-center">
-            <a href="#about" className="text-gray-400 hover:text-white">
+            <a
+              href="https://beyondchats.com/about-us/"
+              className="text-gray-400 hover:text-white"
+            >
               About Us
             </a>
-            <a href="#contact" className="text-gray-400 hover:text-white">
+            <a
+              href="https://beyondchats.com/contact-us/"
+              className="text-gray-400 hover:text-white"
+            >
               Contact
             </a>
-            <a href="#privacy" className="text-gray-400 hover:text-white">
+            <a
+              href="https://beyondchats.com/privacy-policy/"
+              className="text-gray-400 hover:text-white"
+            >
               Privacy Policy
             </a>
-            <a href="#terms" className="text-gray-400 hover:text-white">
+            <a
+              href="https://beyondchats.com/terms-and-conditions/"
+              className="text-gray-400 hover:text-white"
+            >
               Terms of Service
             </a>
           </div>

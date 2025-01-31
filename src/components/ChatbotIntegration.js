@@ -7,6 +7,7 @@ const ChatbotIntegration = () => {
   const [isIntegrationSuccess, setIsIntegrationSuccess] = useState(false);
   const [isIntegrationFailure, setIsIntegrationFailure] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
+  const [confetti, setConfetti] = useState(true);
   const navigate = useNavigate();
 
   const testChatbot = () => {
@@ -21,12 +22,10 @@ const ChatbotIntegration = () => {
     const isSuccess = true; // always true
     if (isSuccess) {
       setShowConfetti(true);
+      setConfetti(true);
       setIsIntegrationSuccess(true);
       setIsIntegrationFailure(false);
-
-      setTimeout(() => {
-        setShowConfetti(false);
-      }, 3000);
+      setTimeout(() => setConfetti(false), 6000);
     } else {
       setIsIntegrationFailure(true);
       setIsIntegrationSuccess(false);
@@ -72,7 +71,14 @@ const ChatbotIntegration = () => {
 
       {showConfetti && isIntegrationSuccess && (
         <div className="relative m-4">
-          <Confetti width={window.innerWidth} height={window.innerHeight} />
+          {confetti && (
+            <Confetti
+              width={window.innerWidth}
+              height={window.innerHeight}
+              initialVelocityX={8}
+              initialVelocityY={26}
+            />
+          )}
           <div className="text-center space-x-2">
             <h2 className="text-3xl font-semibold text-green-600 mb-4">
               Success!

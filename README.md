@@ -4,7 +4,7 @@ This project is a frontend assignment that demonstrates various functionalities 
 
 ## Live Link
 
-[https://ao-node-asg.netlify.app/]
+[Live](https://ao-node-asg.netlify.app/)
 
 ## Table of Contents
 
@@ -34,7 +34,3 @@ npm start
 
 - Feature 1: Chatbot Integration.
 - Feature 2: UI/UX.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

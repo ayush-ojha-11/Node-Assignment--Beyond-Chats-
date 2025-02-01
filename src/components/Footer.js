@@ -43,16 +43,16 @@ const Footer = () => {
 
           <div className="flex space-x-6 mt-6 lg:mt-0">
             <a href="https://beyondchats.com/">
-              <i class="ri-earth-fill"></i>
+              <i className="ri-earth-fill"></i>
             </a>
             <a href="https://www.linkedin.com/company/beyondchats-ai/">
-              <i class="ri-linkedin-box-fill"></i>
+              <i className="ri-linkedin-box-fill"></i>
             </a>
             <a href="https://x.com/i/flow/login?redirect_after_login=%2Fbeyondchats_ai">
-              <i class="ri-twitter-x-fill"></i>
+              <i className="ri-twitter-x-fill"></i>
             </a>
             <a href="https://www.instagram.com/beyondchats_ai/">
-              <i class="ri-instagram-fill"></i>
+              <i className="ri-instagram-fill"></i>
             </a>
           </div>
         </div>

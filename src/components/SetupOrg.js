@@ -35,7 +35,7 @@ const SetupOrg = () => {
     setIsTraining(!isTraining);
     setTimeout(() => {
       navigate("/chatbotintegration");
-    }, 3000);
+    }, 2000);
   };
 
   return (

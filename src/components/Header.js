@@ -49,19 +49,28 @@ const Header = () => {
             Register
           </Link>
 
-          <Link to={"/about"} className="text-white hover:text-gray-300">
+          <a
+            href={"https://beyondchats.com/about-us/"}
+            className="text-white hover:text-gray-300"
+          >
             About
-          </Link>
-          <Link to={"/services"} className="text-white hover:text-gray-300">
+          </a>
+          <a
+            href={"https://beyondchats.com/terms-and-conditions/"}
+            className="text-white hover:text-gray-300"
+          >
             Services
-          </Link>
-          <Link to={"/Support"} className="text-white hover:text-gray-300">
+          </a>
+          <a
+            href={"https://beyondchats.com/faq/"}
+            className="text-white hover:text-gray-300"
+          >
             Support
-          </Link>
+          </a>
         </nav>
       </div>
 
-      {/* Mobile Menu (Dropdown) */}
+      {/* Mobile Menu  */}
       <div className={`lg:hidden ${isMenuOpen ? "block" : "hidden"}`}>
         <ul className="space-y-2 mt-2">
           <li>
@@ -79,28 +88,28 @@ const Header = () => {
           </li>
 
           <li>
-            <Link
-              to={"/about"}
+            <a
+              href={"https://beyondchats.com/about-us/"}
               className="block text-white hover:text-gray-300"
             >
               About
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to={"/services"}
+            <a
+              to={"https://beyondchats.com/terms-and-conditions/"}
               className="block text-white hover:text-gray-300"
             >
               Services
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to={"/support"}
+            <a
+              href={"https://beyondchats.com/faq/"}
               className="block text-white hover:text-gray-300"
             >
               Support
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
